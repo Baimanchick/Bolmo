@@ -1,11 +1,15 @@
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
-import { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
- 
+import './globals.css'
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+
+import { routing } from '@/i18n/routing'
+
+import { font } from './fonts'
+
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 type LayoutParams = {
@@ -13,83 +17,83 @@ type LayoutParams = {
 };
 
 export async function generateMetadata(
-  {params}: LayoutParams
+  { params }: LayoutParams,
 ): Promise<Metadata> {
-  const {locale} = await params;
-  const t = await getTranslations({locale, namespace: "LayoutMetadata"});
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'LayoutMetadata' })
 
-  const baseUrl = "https://bolmo.kg";
-  const canonicalPath = locale === "ru" ? "/" : `/${locale}`;
+  const baseUrl = 'https://bolmo.kg'
+  const canonicalPath = locale === 'ru' ? '/' : `/${locale}`
 
   return {
     metadataBase: new URL(baseUrl),
     title: {
-      default: t("titleDefault"),
-      template: "%s | Bolmo"
+      default: t('titleDefault'),
+      template: '%s | Bolmo',
     },
-    description: t("description"),
+    description: t('description'),
     alternates: {
       canonical: canonicalPath,
       languages: {
-        ru: "/",
-        en: "/en",
-        kg: "/kg"
-      }
+        ru: '/',
+        en: '/en',
+        kg: '/kg',
+      },
     },
     openGraph: {
-      title: t("ogTitle"),
-      description: t("ogDescription"),
+      title: t('ogTitle'),
+      description: t('ogDescription'),
       url: canonicalPath,
-      siteName: "Bolmo",
-      type: "website",
+      siteName: 'Bolmo',
+      type: 'website',
       locale:
-        locale === "ru"
-          ? "ru_RU"
-          : locale === "kg"
-          ? "ky_KG"
-          : "en_US",
+        locale === 'ru'
+          ? 'ru_RU'
+          : locale === 'kg'
+            ? 'ky_KG'
+            : 'en_US',
       images: [
         {
-          url: "/og/bolmo-og-default.jpg",
+          url: '/og/bolmo-og-default.jpg',
           width: 1200,
           height: 630,
-          alt: t("ogAlt")
-        }
-      ]
+          alt: t('ogAlt'),
+        },
+      ],
     },
     twitter: {
-      card: "summary_large_image",
-      title: t("twitterTitle"),
-      description: t("twitterDescription"),
-      images: ["/og/bolmo-twitter-default.jpg"]
+      card: 'summary_large_image',
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ['/og/bolmo-twitter-default.jpg'],
     },
     icons: {
-      icon: "/favicon.ico"
-    }
-  };
+      icon: '/favicon.ico',
+    },
+  }
 }
- 
+
 export default async function RootLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: Promise<{locale: string}>;
 }) {
-  const {locale} = await params;
+  const { locale } = await params
+
   if (!hasLocale(routing.locales, locale)) {
-    notFound();
+    notFound()
   }
-  // включает статический рендеринг для конкретной локали - это полезно для SEO
-  setRequestLocale(locale);
- 
+  setRequestLocale(locale)
+
   return (
-    <html lang={locale}>
-      <body>
+    <html lang={locale} data-theme="light" className={font.className}>
+      <body className="container">
         <NextIntlClientProvider>
           {children}
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }
