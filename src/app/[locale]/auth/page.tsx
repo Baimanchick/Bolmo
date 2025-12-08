@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 
 import styles from './page.module.css'
 
+//TODO Перепишу
 const validators = {
   email: (value: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -87,6 +88,7 @@ export default function Auth() {
     setContactValue(value)
     setErrors({})
 
+    //TODO Перепишу
     if (value.includes('@')) {
       setContactType('email')
     } else if (/^\+?\d/.test(value)) {
@@ -96,6 +98,7 @@ export default function Auth() {
     }
   }, [])
 
+  //TODO Перепишу
   const validateInitialForm = React.useCallback((): boolean => {
     const newErrors: Record<string, string> = {}
 
