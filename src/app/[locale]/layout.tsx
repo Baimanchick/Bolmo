@@ -89,7 +89,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} data-theme="light" className={font.className}>
-      <body className="container">
+      <body>
         <NextIntlClientProvider>
           {children}
         </NextIntlClientProvider>

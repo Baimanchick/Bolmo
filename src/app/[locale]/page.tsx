@@ -1,11 +1,8 @@
 import React from 'react'
 
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
 import Header from '@/components/Header/Header'
-
-import styles from './page.module.css'
 
 import type { Metadata } from 'next'
 
@@ -24,11 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Home() {
-  const t = useTranslations('HomePage')
 
   return (
-    <React.Fragment>
+    <main className="container">
       <Header/>
-    </React.Fragment>
+    </main>
   )
 }
