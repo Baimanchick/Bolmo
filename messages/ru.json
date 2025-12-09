@@ -14,5 +14,93 @@
   },
   "HomePage": {
     "title": "Найди соседа по квартире в Бишкеке"
+  },
+  "Auth": {
+    "header": {
+      "welcome": "Добро пожаловать в Bolmo",
+      "subtitle": "Найдите идеальное жильё или соседа"
+    },
+    "fields": {
+      "contact": {
+        "label": "Почта или телефон",
+        "placeholder": "example@mail.com или +996 555 123 456"
+      }
+    },
+    "checkboxes": {
+      "terms": {
+        "prefix": "Я принимаю",
+        "and": "и"
+      },
+      "newsletter": {
+        "label": "Хочу получать рассылку на email"
+      }
+    },
+    "links": {
+      "terms": "пользовательское соглашение",
+      "privacy": "политику конфиденциальности",
+      "personalData": "обработку персональных данных",
+      "forgotPassword": "Забыли пароль?"
+    },
+    "divider": {
+      "or": "или"
+    },
+    "buttons": {
+      "continue": "Продолжить",
+      "loading": "Загрузка...",
+      "google": "Войти через Google",
+      "createAccount": "Создать аккаунт",
+      "creating": "Создание...",
+      "login": "Войти",
+      "loggingIn": "Вход...",
+      "verify": "Подтвердить",
+      "verifying": "Проверка...",
+      "resendCode": "Отправить код повторно"
+    },
+    "emailRegister": {
+      "title": "Создание аккаунта",
+      "subtitle": "Придумайте надёжный пароль для {contactValue}"
+    },
+    "emailLogin": {
+      "title": "Вход в аккаунт",
+      "subtitle": "Аккаунт с {contactValue} уже существует"
+    },
+    "phoneVerify": {
+      "title": "Подтверждение номера",
+      "subtitlePrefix": "Мы отправили SMS-код на номер"
+    },
+    "labels": {
+      "password": "Пароль",
+      "passwordConfirmOptional": "Подтвердите пароль (необязательно)",
+      "smsCode": "Код из SMS"
+    },
+    "placeholders": {
+      "passwordMin": "Минимум 8 символов",
+      "passwordConfirm": "Повторите пароль",
+      "passwordLogin": "Введите ваш пароль",
+      "smsCode": "1234"
+    },
+    "errors": {
+      "contactRequired": "Введите email или номер телефона",
+      "invalidEmail": "Введите корректный email",
+      "invalidPhone": "Введите корректный номер телефона",
+      "termsRequired": "Необходимо принять условия",
+      "passwordTooShort": "Пароль должен содержать минимум 8 символов",
+      "passwordsMismatch": "Пароли не совпадают",
+      "passwordRequired": "Введите пароль",
+      "invalidSmsCode": "Введите корректный код из SMS"
+    },
+    "alerts": {
+      "accountCreated": "Аккаунт создан! Проверьте почту для подтверждения.",
+      "loginSuccess": "Вход выполнен успешно!",
+      "googleAuthDev": "Google авторизация (в разработке)"
+    },
+    "illustration": {
+      "title": "Bolmo",
+      "textLine1": "Найдите идеальное жильё",
+      "textLine2": "или сожителя в Бишкеке"
+    },
+    "footer": {
+      "text": "Bolmo — сервис по аренде квартир и поиску сожителей. Сначала для Бишкека, потом для всего СНГ."
+    }
   }
 }
