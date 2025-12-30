@@ -13,94 +13,25 @@
       "twitterDescription": "Бишкекте биргелешкен ижара үчүн кошо жашоочуларды жана бөлмөлөрдү издөө. Коопсуз чат, текшерүү жана жөнөкөй келишим."
     },
     "HomePage": {
-      "title": "Бишкектен кошо жашоочу тап"
-    },
-    "Auth": {
-    "header": {
-      "welcome": "Bolmo сервисине кош келиңиз",
-      "subtitle": "Идеалдуу батир же кошо жашай турган адам табыңыз"
-    },
-    "fields": {
-      "contact": {
-        "label": "Почта же телефон",
-        "placeholder": "example@mail.com же +996 555 123 456"
+      "Header": {
+        "nav": { "rent": "Ижара", "coLiving": "Кошо жашоо", "roommate": "Подселение" },
+        "actions": { "postAd": "Жарыя жайгаштыруу", "language": "Тил", "menu": "Меню" },
+        "megaTabs": { "rent": "Ижара", "coLiving": "Кошо жашоо", "forms": "Анкеталар" },
+        "rent": {
+          "long": "Узак мөөнөттүү ижара",
+          "flats": "Квартиралар",
+          "room": "Бөлмө",
+          "houses": "Үйлөр жана коттедждер",
+          "daily": "Күнүмдүк ижара",
+          "leaseOut": "Ижарага берүү"
+        },
+        "coLiving": { "search": "Коңшу табуу", "post": "Анкета жайгаштыруу" },
+        "forms": { "renter": "Ижарачы анкета", "roommate": "Подселение анкета" },
+        "journal": {
+          "rent": "Bolmo.Журнал / Ижара",
+          "coLiving": "Bolmo.Журнал / Кошо жашоо",
+          "forms": "Bolmo.Журнал / Анкета"
+        }
       }
-    },
-    "checkboxes": {
-      "terms": {
-        "prefix": "Мен макулмун",
-        "and": "жана"
-      },
-      "newsletter": {
-        "label": "Email аркылуу кабарламаларды алгым келет"
-      }
-    },
-    "links": {
-      "terms": "колдонуучу келишими",
-      "privacy": "купуялык саясаты",
-      "personalData": "жеке маалыматты иштетүү",
-      "forgotPassword": "Сырсөздү унуттуңузбу?"
-    },
-    "divider": {
-      "or": "же"
-    },
-    "buttons": {
-      "continue": "Улантуу",
-      "loading": "Жүктөлүүдө...",
-      "google": "Google аркылуу кирүү",
-      "createAccount": "Аккаунт түзүү",
-      "creating": "Түзүлүүдө...",
-      "login": "Кирүү",
-      "loggingIn": "Кирүүдө...",
-      "verify": "Текшерүү",
-      "verifying": "Текшерүүдө...",
-      "resendCode": "Кодду кайра жөнөтүү"
-    },
-    "emailRegister": {
-      "title": "Аккаунт түзүү",
-      "subtitle": "{contactValue} үчүн коопсуз сырсөз ойлоп табыңыз"
-    },
-    "emailLogin": {
-      "title": "Аккаунтка кирүү",
-      "subtitle": "{contactValue} менен аккаунт мурда эле бар"
-    },
-    "phoneVerify": {
-      "title": "Телефонду тастыктоо",
-      "subtitlePrefix": "Биз SMS-кодду төмөнкү номерге жөнөттүк:"
-    },
-    "labels": {
-      "password": "Сырсөз",
-      "passwordConfirmOptional": "Сырсөздү кайталаңыз (милдеттүү эмес)",
-      "smsCode": "SMS-код"
-    },
-    "placeholders": {
-      "passwordMin": "Кеминде 8 символ",
-      "passwordConfirm": "Сырсөздү кайталаңыз",
-      "passwordLogin": "Сырсөзіңизни жазыңыз",
-      "smsCode": "1234"
-    },
-    "errors": {
-      "contactRequired": "Email же телефон номерин жазыңыз",
-      "invalidEmail": "Туура email жазыңыз",
-      "invalidPhone": "Туура телефон номер жазыңыз",
-      "termsRequired": "Шарттар менен макул болушуңуз керек",
-      "passwordTooShort": "Сырсөз кеминде 8 символ болушу керек",
-      "passwordsMismatch": "Сырсөздөр дал келбейт",
-      "passwordRequired": "Сырсөз жазыңыз",
-      "invalidSmsCode": "Туура SMS-код жазыңыз"
-    },
-    "alerts": {
-      "accountCreated": "Аккаунт түзүлдү! Тастыктоо үчүн почтаңызды текшериңиз.",
-      "loginSuccess": "Ийгиликтүү кирдиңиз!",
-      "googleAuthDev": "Google авторизациясы (иштелүүдө)"
-    },
-    "illustration": {
-      "title": "Bolmo",
-      "textLine1": "Идеалдуу батир табыңыз",
-      "textLine2": "же кошо жашай турган адамды Бишкектен издеңиз"
-    },
-    "footer": {
-      "text": "Bolmo — батир ижарага алуу жана кошо жашоочу табуу кызматы. Адегенде Бишкек үчүн, андан кийин бүтүндөй КМШ үчүн."
     }
-  }
 }

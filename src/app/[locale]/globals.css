@@ -23,6 +23,7 @@
   --primary-hover: #572FC2;
   --primary-active: #43249A;
   --neutral-text: #111827;
+  --neutral-border: #FBFBFB;
   --color-link: #6E41E6;
   --color-link-hover: #572FC2;
   --focus-ring: #BDA7FF;
@@ -68,7 +69,7 @@ a {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1376px;
   margin: 0 auto;
 }
 
