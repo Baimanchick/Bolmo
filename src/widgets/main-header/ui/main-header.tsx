@@ -32,50 +32,13 @@ export const MainHeader: React.FC = () => {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = React.useState(false)
   const [activeMegaTab, setActiveMegaTab] = React.useState<MegaTabValue>('rent')
 
-  const closeTimeoutIdRef = React.useRef<number | null>(null)
-  const isPointerOverBurgerRef = React.useRef(false)
-  const [isHoverOpenBlocked, setIsHoverOpenBlocked] = React.useState(false)
-
-  const cancelScheduledClose = React.useCallback(() => {
-    if (closeTimeoutIdRef.current !== null) {
-      window.clearTimeout(closeTimeoutIdRef.current)
-      closeTimeoutIdRef.current = null
-    }
+  const closeMegaMenu = React.useCallback(() => {
+    setIsMegaMenuOpen(false)
   }, [])
 
-  const closeMegaMenu = React.useCallback(() => {
-    cancelScheduledClose()
-    setIsMegaMenuOpen(false)
-  }, [cancelScheduledClose])
-
   const openMegaMenu = React.useCallback(() => {
-    cancelScheduledClose()
     setIsMegaMenuOpen(true)
-  }, [cancelScheduledClose])
-
-  const scheduleClose = React.useCallback(() => {
-    cancelScheduledClose()
-    closeTimeoutIdRef.current = window.setTimeout(() => {
-      setIsMegaMenuOpen(false)
-    }, 1500)
-  }, [cancelScheduledClose])
-
-  const handleBurgerPointerEnter = React.useCallback(() => {
-    isPointerOverBurgerRef.current = true
-    cancelScheduledClose()
-
-    if (isHoverOpenBlocked) return
-
-    setIsMegaMenuOpen(true)
-  }, [cancelScheduledClose, isHoverOpenBlocked])
-
-  const handleBurgerPointerLeave = React.useCallback(() => {
-    isPointerOverBurgerRef.current = false
-
-    setIsHoverOpenBlocked(false)
-
-    scheduleClose()
-  }, [scheduleClose])
+  }, [])
 
   const handleBurgerClick = React.useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -85,23 +48,17 @@ export const MainHeader: React.FC = () => {
       if (isMegaMenuOpen) {
         closeMegaMenu()
 
-        if (isPointerOverBurgerRef.current) setIsHoverOpenBlocked(true)
-
         return
       }
 
-      setIsHoverOpenBlocked(false)
       openMegaMenu()
     },
     [isMegaMenuOpen, closeMegaMenu, openMegaMenu],
   )
 
-  const changeLocale = React.useCallback(
-    (nextLocale: LocaleValue) => {
-      router.replace(pathname, { locale: nextLocale })
-    },
-    [router, pathname],
-  )
+  const changeLocale = (nextLocale: LocaleValue) => {
+    router.replace(pathname, { locale: nextLocale })
+  }
 
   return (
     <header className={cls.header}>
@@ -163,11 +120,7 @@ export const MainHeader: React.FC = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <div
-            className={cls.burgerWrap}
-            onPointerEnter={handleBurgerPointerEnter}
-            onPointerLeave={handleBurgerPointerLeave}
-          >
+          <div className={cls.burgerWrap}>
             <button
               className={`${cls.iconButton} ${cls.burgerButton} ${isMegaMenuOpen ? cls.iconButtonActive : ''}`}
               aria-label={t('actions.menu')}
@@ -190,14 +143,12 @@ export const MainHeader: React.FC = () => {
             aria-label={t('actions.menu')}
             onMouseDown={closeMegaMenu}
           />
-
-          <div
-            className={cls.megaPanelWrap}
-            onPointerEnter={cancelScheduledClose}
-            onPointerLeave={scheduleClose}
-          >
+          <div className={cls.megaPanelWrap} onPointerLeave={closeMegaMenu}>
             <div className={`${cls.megaPanel} container`}>
-              <Tabs value={activeMegaTab} onValueChange={(v) => setActiveMegaTab(v as MegaTabValue)}>
+              <Tabs
+                value={activeMegaTab}
+                onValueChange={(nextValue) => setActiveMegaTab(nextValue as MegaTabValue)}
+              >
                 <TabsList className={cls.megaTabsList}>
                   <TabsTrigger className={cls.megaTab} value="rent">
                     {t('megaTabs.rent')}
