@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getTranslations } from 'next-intl/server'
 
-import { Button } from '@/components/ui/button'
+import { MainHeader } from '@/widgets/main-header/ui/main-header'
 
 import type { Metadata } from 'next'
 
@@ -23,8 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function Home() {
 
   return (
-    <main>
-      <Button>Привет</Button>
+    <main className="container">
+      <MainHeader/>
+      <h1>Hello</h1>
     </main>
   )
 }

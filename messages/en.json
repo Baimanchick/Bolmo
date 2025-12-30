@@ -13,94 +13,25 @@
         "twitterDescription": "Поиск соседей и комнат для совместной аренды жилья в Бишкеке. Безопасный чат, верификация и простой договор."
     },
     "HomePage": {
-        "title": "Find a roommate in Bishkek"
-    },
-    "Auth": {
-    "header": {
-      "welcome": "Welcome to Bolmo",
-      "subtitle": "Find the perfect home or roommate"
-    },
-    "fields": {
-      "contact": {
-        "label": "Email or phone",
-        "placeholder": "example@mail.com or +996 555 123 456"
+      "Header": {
+        "nav": { "rent": "Rent", "coLiving": "Co-living", "roommate": "Roommate" },
+        "actions": { "postAd": "Post an ad", "language": "Language", "menu": "Menu" },
+        "megaTabs": { "rent": "Rent", "coLiving": "Co-living", "forms": "Forms" },
+        "rent": {
+          "long": "Long-term rent",
+          "flats": "Apartments",
+          "room": "Room",
+          "houses": "Houses & cottages",
+          "daily": "Daily rent",
+          "leaseOut": "Lease out"
+        },
+        "coLiving": { "search": "Find a roommate", "post": "Create a profile" },
+        "forms": { "renter": "Renter profile", "roommate": "Roommate profile" },
+        "journal": {
+          "rent": "Bolmo.Journal / Rent",
+          "coLiving": "Bolmo.Journal / Co-living",
+          "forms": "Bolmo.Journal / Form"
+        }
       }
-    },
-    "checkboxes": {
-      "terms": {
-        "prefix": "I accept the",
-        "and": "and"
-      },
-      "newsletter": {
-        "label": "I want to receive email updates"
-      }
-    },
-    "links": {
-      "terms": "User Agreement",
-      "privacy": "Privacy Policy",
-      "personalData": "Personal Data Processing",
-      "forgotPassword": "Forgot password?"
-    },
-    "divider": {
-      "or": "or"
-    },
-    "buttons": {
-      "continue": "Continue",
-      "loading": "Loading...",
-      "google": "Continue with Google",
-      "createAccount": "Create account",
-      "creating": "Creating...",
-      "login": "Log in",
-      "loggingIn": "Logging in...",
-      "verify": "Verify",
-      "verifying": "Verifying...",
-      "resendCode": "Resend code"
-    },
-    "emailRegister": {
-      "title": "Create an account",
-      "subtitle": "Create a secure password for {contactValue}"
-    },
-    "emailLogin": {
-      "title": "Log in to your account",
-      "subtitle": "An account with {contactValue} already exists"
-    },
-    "phoneVerify": {
-      "title": "Phone verification",
-      "subtitlePrefix": "We have sent an SMS code to"
-    },
-    "labels": {
-      "password": "Password",
-      "passwordConfirmOptional": "Confirm password (optional)",
-      "smsCode": "SMS code"
-    },
-    "placeholders": {
-      "passwordMin": "At least 8 characters",
-      "passwordConfirm": "Repeat the password",
-      "passwordLogin": "Enter your password",
-      "smsCode": "1234"
-    },
-    "errors": {
-      "contactRequired": "Enter email or phone number",
-      "invalidEmail": "Enter a valid email",
-      "invalidPhone": "Enter a valid phone number",
-      "termsRequired": "You must accept the terms",
-      "passwordTooShort": "Password must be at least 8 characters",
-      "passwordsMismatch": "Passwords do not match",
-      "passwordRequired": "Enter your password",
-      "invalidSmsCode": "Enter a valid SMS code"
-    },
-    "alerts": {
-      "accountCreated": "Account created! Check your email to confirm.",
-      "loginSuccess": "Successfully logged in!",
-      "googleAuthDev": "Google authentication (in development)"
-    },
-    "illustration": {
-      "title": "Bolmo",
-      "textLine1": "Find the perfect home",
-      "textLine2": "or roommate in Bishkek"
-    },
-    "footer": {
-      "text": "Bolmo is a service for apartment rentals and roommate search. First for Bishkek, then for the whole CIS."
     }
-  }
 }
